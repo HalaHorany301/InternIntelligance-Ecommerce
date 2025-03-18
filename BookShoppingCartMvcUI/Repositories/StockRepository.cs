@@ -15,8 +15,7 @@ namespace BookShoppingCartMvcUI.Repositories
 
         public async Task ManageStock(StockDTO stockToManage)
         {
-            // if there is no stock for given book id, then add new record
-            // if there is already stock for given book id, update stock's quantity
+           
             var existingStock = await GetStockByBookId(stockToManage.BookId);
             if (existingStock is null)
             {
